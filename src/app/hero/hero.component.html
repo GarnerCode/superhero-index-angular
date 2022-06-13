@@ -1,4 +1,8 @@
-<div class="heroCard" [ngClass]="hero.biography.alignment === 'good' ? 'hero' : 'villain'">
+<div class="heroCard" [ngClass]="
+{'hero': hero.biography.alignment === 'good', 
+'villain': hero.biography.alignment === 'bad', 
+'neutral': hero.biography.alignment === 'neutral'
+}">
     <h2>{{hero.name}}</h2>
       <img src="{{hero.images.sm}}" alt="{{hero.name}}">
 
