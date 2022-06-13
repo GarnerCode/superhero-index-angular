@@ -1,0 +1,39 @@
+<div class="heroCard" [ngClass]="hero.biography.alignment === 'good' ? 'hero' : 'villain'">
+    <h2>{{hero.name}}</h2>
+      <img src="{{hero.images.sm}}" alt="{{hero.name}}">
+
+      <h3>Stats</h3>
+      <ul>
+        <li>Intelligence: {{hero.powerstats.intelligence}}</li>
+        <li>Strength: {{hero.powerstats.strength}}</li>
+        <li>Speed: {{hero.powerstats.speed}}</li>
+        <li>Durability: {{hero.powerstats.durability}}</li>
+        <li>Power: {{hero.powerstats.power}}</li>
+        <li>Combat: {{hero.powerstats.combat}}</li>
+      </ul>
+
+      <h3>Appearance</h3>
+      <p>Gender: {{hero.appearance.gender}}</p>
+      <p>Race: {{hero.appearance.race}}</p>
+      <p>Height: {{hero.appearance.height[0] + ' / ' + hero.appearance.height[1]}}</p>
+      <p>Weight: {{hero.appearance.weight[0] + ' / ' + hero.appearance.weight[1]}}</p>
+      <p>Eye Color: {{hero.appearance.eyeColor}}</p>
+      <p>Hair Color: {{hero.appearance.hairColor}}</p>
+
+      <h3>Biography</h3>
+      <p>Full Name: {{hero.biography.fullName}}</p>
+      <p>Alter Egos: {{hero.biography.alterEgos}}</p>
+      <p>Aliases: <span *ngFor="let alias of hero.biography.aliases">{{alias}}, </span></p>
+      <p>Place of Birth: {{hero.biography.placeOfBirth}}</p>
+      <p>First Appearance: {{hero.biography.firstAppearance}}</p>
+      <p>Publisher: {{hero.biography.publisher}}</p>
+      <p>Alignment: {{hero.biography.alignment}}</p>
+
+      <h3>Work</h3>
+      <p>Occupation: {{hero.work.occupation}}</p>
+      <p>Base: {{hero.work.base}}</p>
+
+      <h3>Connections</h3>
+      <p>Group Affiliation: {{hero.connections.groupAffiliation}}</p>
+      <p>Realtives: {{hero.connections.relatives}}</p>
+</div>

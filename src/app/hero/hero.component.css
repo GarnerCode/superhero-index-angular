@@ -1,0 +1,23 @@
+h2, h3 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+.hero {
+    background-color: #9BCFFF;
+}
+.villain {
+    background-color: #FF9898;
+}
+
+@media screen and (min-width: 0px) {
+    .heroCard {
+        margin: 16px 12.125px;
+        padding: 8px 16px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px silver;
+    }
+}
