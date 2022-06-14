@@ -1,0 +1,30 @@
+<input [(ngModel)]="searchInput" type="text" placeholder="Name">
+<button (click)="handleSearch(searchInput)">Search</button>
+<div class="container">
+    <ng-container *ngIf="searchedValue === ''">
+        <app-hero 
+            class="heroCard" 
+            [ngClass]="
+                {'hero': hero.biography.alignment === 'good', 
+                'villain': hero.biography.alignment === 'bad', 
+                'neutral': hero.biography.alignment === 'neutral'
+                }" 
+            *ngFor="let hero of heroes" 
+            [hero]="hero" 
+            [heroes]="heroes">
+        </app-hero>
+    </ng-container>
+    <ng-container *ngIf="searchedValue !== ''">
+        <app-hero 
+            class="heroCard" 
+            [ngClass]="
+                {'hero': hero.biography.alignment === 'good', 
+                'villain': hero.biography.alignment === 'bad', 
+                'neutral': hero.biography.alignment === 'neutral'
+                }" 
+            *ngFor="let hero of heroes | filterHeroes:searchedValue" 
+            [hero]="hero" 
+            [heroes]="heroes">
+        </app-hero>
+    </ng-container>
+</div>

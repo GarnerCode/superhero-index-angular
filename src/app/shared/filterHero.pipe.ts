@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterHeroesPipe implements PipeTransform {
     transform(heroes : any, heroName: string): any[] {
         if (heroes) {
-            return heroes.filter((hero: any) => hero.name.includes(heroName));
+            return heroes.filter((hero: any) => hero.name.toLowerCase().includes(heroName.toLowerCase()));
         }
     }
 }

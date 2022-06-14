@@ -1,0 +1,42 @@
+input {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+}
+button {
+    display: block;
+    margin: 1em auto;
+    padding: 0.5em 1em;
+}
+.hero {
+    background-color: #9BCFFF;
+}
+.villain {
+    background-color: #FF9898;
+}
+.neutral {
+    background-color: #D0D0D0;
+}
+@media screen and (min-width: 0px) {
+    .heroCard {
+        width: 85vw;
+        margin: 1em auto;
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px silver;
+    }
+}
+@media screen and (min-width: 1080px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .heroCard {
+        width: 90%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
